@@ -1,36 +1,108 @@
 @import './base.css';
 @import 'tailwindcss';
 
+:root {
+  --color-primary: #aaff00;
+  --color-bg: #060609;
+  --color-bg-elevated: #0d0d16;
+  --color-bg-surface: #141420;
+  --color-acid: #aaff00;
+  --color-fg: #ebebdf;
+  --color-muted: #565666;
+  --color-border: #1a1a28;
+  --color-danger: #ff2d2d;
+  --color-acid-glow: rgba(170, 255, 0, 0.18);
+  --color-acid-flat: rgba(170, 255, 0, 0.07);
+}
+
+.light {
+  --color-primary: #5b9900;
+  --color-bg: #f5f5f0;
+  --color-bg-elevated: #ffffff;
+  --color-bg-surface: #e6e6dc;
+  --color-acid: #5b9900; /* higher contrast dark-green/acid for light mode readability */
+  --color-fg: #101508;
+  --color-muted: #888899;
+  --color-border: #d2d2c8;
+  --color-danger: #ff2d2d;
+  --color-acid-glow: rgba(91, 153, 0, 0.12);
+  --color-acid-flat: rgba(91, 153, 0, 0.05);
+}
+
+@theme {
+  --color-primary: var(--color-primary);
+  --color-bg: var(--color-bg);
+  --color-bg-elevated: var(--color-bg-elevated);
+  --color-bg-surface: var(--color-bg-surface);
+  --color-acid: var(--color-acid);
+  --color-fg: var(--color-fg);
+  --color-muted: var(--color-muted);
+  --color-border: var(--color-border);
+  --color-danger: var(--color-danger);
+
+  --color-acid-glow: var(--color-acid-glow);
+  --color-acid-flat: var(--color-acid-flat);
+
+  --font-display-lg: 'Chakra Petch', sans-serif;
+  --font-headline-lg: 'Chakra Petch', sans-serif;
+  --font-headline-md: 'Space Grotesk', sans-serif;
+  --font-body-lg: 'JetBrains Mono', monospace;
+  --font-body-md: 'JetBrains Mono', monospace;
+  --font-label-lg: 'JetBrains Mono', monospace;
+  --font-label-md: 'JetBrains Mono', monospace;
+
+  --spacing-grid_unit: 44px;
+  --spacing-base_padding: 1.5rem;
+}
+
 #app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
+@utility grid-bg {
+  background-size: 44px 44px;
+  background-position: center top;
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
+@utility bg-grid-pattern {
+  background-image:
+    linear-gradient(to right, var(--color-border) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--color-border) 1px, transparent 1px);
 }
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
+@utility text-outline {
+  -webkit-text-stroke: 1px var(--color-fg);
+  color: transparent;
+}
 
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
+@utility blink {
+  animation: blinker 1s linear infinite;
+}
+
+@utility acid-glow {
+  box-shadow: 0 0 20px 0 var(--color-acid-glow);
+}
+
+@utility acid-glow-active {
+  box-shadow: 0 0 30px 5px var(--color-acid-glow);
+  border-color: var(--color-acid);
+}
+
+@utility scanline {
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0) 50%,
+    rgba(0, 0, 0, 0.15) 50%,
+    rgba(0, 0, 0, 0.15)
+  );
+  background-size: 100% 4px;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
   }
 }
