@@ -13,15 +13,17 @@
     <div class="relative z-10 flex max-w-4xl flex-col items-center px-base_padding">
       <!-- Label -->
       <div class="mb-10 flex items-center justify-center gap-2 font-label-md select-none">
-        <span class="text-[10px] tracking-[0.14em] text-acid uppercase">04 — PASSERELLE</span>
+        <h2 class="m-0 text-[10px] font-normal tracking-[0.14em] text-acid uppercase">
+          04 — PASSERELLE
+        </h2>
       </div>
 
       <!-- Large display text -->
-      <h2
+      <h3
         class="mb-8 font-display-lg text-[40px] leading-tight font-bold tracking-wider text-fg uppercase select-none md:text-[64px]"
       >
         L'AUTRE CÔTÉ DU MIROIR
-      </h2>
+      </h3>
 
       <!-- Subtext -->
       <p class="mb-16 font-body-md text-[12px] tracking-[0.2em] text-muted select-none">

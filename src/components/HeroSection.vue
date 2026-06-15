@@ -144,23 +144,23 @@ onMounted(() => {
       </div>
 
       <!-- Cascading Headlines with strict style spacing -->
-      <div class="mb-12 flex flex-col select-none">
-        <h1
-          class="m-0 text-left font-display-lg text-[42px] leading-[0.88] font-bold tracking-[-0.04em] text-fg uppercase sm:text-[64px] md:text-[96px]"
+      <h1 class="mb-12 flex flex-col select-none">
+        <span
+          class="block text-left font-display-lg text-[42px] leading-[0.88] font-bold tracking-[-0.04em] text-fg uppercase sm:text-[64px] md:text-[96px]"
         >
           CONSTRUIRE
-        </h1>
-        <h1
-          class="m-0 ml-[20px] text-left font-display-lg text-[42px] leading-[0.88] font-bold tracking-[-0.04em] text-acid uppercase sm:ml-[40px] sm:text-[64px] md:ml-[80px] md:text-[96px]"
+        </span>
+        <span
+          class="ml-[20px] block text-left font-display-lg text-[42px] leading-[0.88] font-bold tracking-[-0.04em] text-acid uppercase sm:ml-[40px] sm:text-[64px] md:ml-[80px] md:text-[96px]"
         >
           CASSER
-        </h1>
-        <h1
-          class="m-0 mt-4 ml-[40px] text-left font-display-lg text-[22px] leading-[0.88] font-bold text-outline uppercase sm:ml-[80px] sm:text-[32px] md:ml-[180px] md:text-[46px]"
+        </span>
+        <span
+          class="mt-4 ml-[40px] block text-left font-display-lg text-[22px] leading-[0.88] font-bold text-outline uppercase sm:ml-[80px] sm:text-[32px] md:ml-[180px] md:text-[46px]"
         >
           RECOMMENCER
-        </h1>
-      </div>
+        </span>
+      </h1>
 
       <!-- Description with left border -->
       <div class="mb-12 max-w-[380px] border-l-2 border-acid pl-4">

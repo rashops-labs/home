@@ -66,7 +66,9 @@ const visibleProjects = computed(() => projects.value.filter((project) => projec
     <div class="mx-auto w-full max-w-7xl">
       <!-- Section Header Pattern -->
       <div class="mb-16 flex items-center gap-4 font-label-md select-none">
-        <span class="text-[10px] tracking-[0.14em] text-acid uppercase">02 — PROJETS</span>
+        <h2 class="m-0 text-[10px] font-normal tracking-[0.14em] text-acid uppercase">
+          02 — PROJETS
+        </h2>
         <div class="h-px flex-grow bg-border"></div>
       </div>
 
