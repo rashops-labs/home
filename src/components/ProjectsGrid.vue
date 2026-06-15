@@ -39,7 +39,7 @@ const projects = ref<Project[]>([
     index: '/003',
     title: 'RashOps Labs',
     status: 'ACTIF',
-    description: "Ce système même. Laboratoire de design et d'ingénierie UI/UX.",
+    description: "Ce système même. Laboratoire de design et d'ingénierie UI/UX🧪.",
     colSpan: 'md:col-span-4',
     githubUrl: 'https://github.com/rashops-labs/home',
     demoUrl: 'https://rashlabs.dev',
