@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 import ProjectCard from './ProjectCard.vue'
 
 interface Project {
@@ -10,27 +10,30 @@ interface Project {
   index: string
   githubUrl: string
   demoUrl?: string
+  show: boolean
 }
 
 const projects = ref<Project[]>([
   {
     index: '/001',
-    title: 'Eventry',
+    title: 'Gowl',
     status: 'EN COURS',
     description:
-      "Plateforme de gestion d'événements haute performance. Architecture microservices et interface réactive.",
+      'Gowl est une gestionnaire de tache intégrer au terminal. Il se veut ultra-minimaliste pour le terminal, mais boosté à la détection de priorités.',
     colSpan: 'md:col-span-8',
     githubUrl: 'https://github.com/rashops-labs/eventry',
+    show: true,
   },
   {
     index: '/002',
-    title: 'FinPulse AI',
-    status: 'TERMINÉ',
+    title: 'Py-toolbox',
+    status: 'EN COURS',
     description:
-      "Analyse prédictive de marchés financiers propulsée par des modèles d'apprentissage profond.",
+      'Py Toolbox is an interactive command-line interface for generating utility files in Python ✏️.',
     colSpan: 'md:col-span-4',
     githubUrl: 'https://github.com/rashops-labs/finpulse-ai',
     demoUrl: 'https://finpulse.rashlabs.dev',
+    show: true,
   },
   {
     index: '/003',
@@ -40,6 +43,7 @@ const projects = ref<Project[]>([
     colSpan: 'md:col-span-4',
     githubUrl: 'https://github.com/rashops-labs/home',
     demoUrl: 'https://rashlabs.dev',
+    show: true,
   },
   {
     index: '/004',
@@ -49,8 +53,12 @@ const projects = ref<Project[]>([
       "Outil CLI open-source pour le scraping distribué et l'extraction de données structurées.",
     colSpan: 'md:col-span-8',
     githubUrl: 'https://github.com/rashops-labs/openclaw',
+    show: false,
   },
 ])
+
+// Filter projects dynamically based on the 'show' boolean property
+const visibleProjects = computed(() => projects.value.filter((project) => project.show))
 </script>
 
 <template>
@@ -64,7 +72,7 @@ const projects = ref<Project[]>([
 
       <!-- Asymmetric masonry grid layout -->
       <div class="grid grid-cols-1 gap-6 md:grid-cols-12 md:gap-grid_unit">
-        <ProjectCard v-for="project in projects" :key="project.title" :project="project" />
+        <ProjectCard v-for="project in visibleProjects" :key="project.title" :project="project" />
       </div>
     </div>
   </section>

@@ -10,6 +10,7 @@ interface Project {
   index: string
   githubUrl: string
   demoUrl?: string
+  show?: boolean
 }
 
 defineProps<{
