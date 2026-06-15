@@ -1,13 +1,52 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="en" class="dark">
   <head>
     <meta charset="UTF-8">
-    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" href="/favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vite App</title>
+    <title>rashops.labs // experimental engineering playground</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="rashops.labs — experimental engineering playground exploring acid-brutalist aesthetics, 3d webgl experiences, and cutting-edge software development.">
+    <meta name="keywords" content="rashops, labs, engineering, webgl, three.js, vue 3, vite, brutalism, design system, experimental ui">
+    <meta name="author" content="Rayhan">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://rashlabs.dev">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://rashlabs.dev/">
+    <meta property="og:title" content="rashops.labs // experimental engineering playground">
+    <meta property="og:description" content="experimental engineering playground exploring acid-brutalist aesthetics, 3d webgl experiences, and cutting-edge software development.">
+    <meta property="og:image" content="https://rashlabs.dev/favicon.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:url" content="https://rashlabs.dev/">
+    <meta property="twitter:title" content="rashops.labs // experimental engineering playground">
+    <meta property="twitter:description" content="experimental engineering playground exploring acid-brutalist aesthetics, 3d webgl experiences, and cutting-edge software development.">
+    <meta property="twitter:image" content="https://rashlabs.dev/favicon.png">
+
+    <script>
+      (function() {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'light') {
+          document.documentElement.classList.remove('dark');
+          document.documentElement.classList.add('light');
+        } else {
+          document.documentElement.classList.remove('light');
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=JetBrains+Mono:wght@400;500;700;800&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
   </head>
-  <body>
+  <body class="bg-[#060609] text-[#dfe5cf] min-h-screen">
     <div id="app"></div>
     <script type="module" src="/src/main.ts"></script>
+
+    <!-- 100% privacy-first analytics -->
+    <script data-collect-dnt="true" async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
   </body>
 </html>
