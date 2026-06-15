@@ -166,7 +166,7 @@ onMounted(() => {
       <div class="mb-12 max-w-[380px] border-l-2 border-acid pl-4">
         <p class="font-body-md text-[11px] leading-relaxed text-fg/75">
           Design system expérimental. Brutalisme numérique. Exploration des limites de l'interface
-          utilisateur. Focus sur l'utilitaire brut et l'esthétique terminale. Aucun compromis.
+          utilisateur. Focus sur l'utilitaire brut et l'esthétique terminale. Aucun compromis🏗️.
         </p>
       </div>
 
